@@ -30,9 +30,12 @@ const Home = () => {
         }
     }, [creature]);
 
-    const removeCreature = (toRemove) => {
+    const removeCreature = () => {
         const aux = [...creatureList];
-        aux.splice(aux.indexOf(toRemove));
+        console.log(aux);
+        const index = aux.indexOf(showCreature);
+        aux.splice(index, 1);
+        console.log(aux)
         setCreatureList(aux);
         setShowCreature(null);
     };
