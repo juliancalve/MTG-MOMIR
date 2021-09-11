@@ -14,6 +14,6 @@ export const getCreature = async ({cmc}) => {
         }
         return random;
     } catch( error ) {
-        alert(error);
+        alert('No hay nada con ese mana value.');
     }
 }
