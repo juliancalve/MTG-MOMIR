@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const ManaSelector = ({cmc, setCmc, onClick, disabled}) => {
 
@@ -7,7 +7,7 @@ const ManaSelector = ({cmc, setCmc, onClick, disabled}) => {
     }
 
     const removeOne = () => {
-        if(cmc != 0)
+        if(cmc !== 0)
         setCmc(cmc-1)
     }
 

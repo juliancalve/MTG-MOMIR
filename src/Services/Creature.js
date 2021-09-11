@@ -7,7 +7,6 @@ export const getCreature = async ({cmc}) => {
         while(!hasImg){
 
             const response = await mtg.card.where({ cmc, type: 'Creature' });
-            console.log(response);
             random = response[Math.floor(Math.random() * response.length)];
             if(random.imageUrl && random.setName !== 'Unstable' && random.setName !== 'Unsanctioned') {
                 hasImg = true;
